@@ -35,6 +35,7 @@
 ================================ */
 * {
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
@@ -43,6 +44,8 @@
     --text-heading: 1.75rem;
     --text-subtitle: 2.5rem;
     --text-title: 3rem;
+    --coconut-white: #E9EDF6;
+    --dark-steel-blue: #294056;
 }
 
 html {
@@ -54,6 +57,7 @@ html {
 }
 
 body {
+    background-color: var(--coconut-white);
     height: 100%;
     margin: 0 auto;
     width: 100%;
@@ -65,33 +69,76 @@ body {
 ================================ */
 header {
     width: 100%;
+    background-color: steelblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px -3px 22px 1px var(--dark-steel-blue);
+}
+
+header * {
+    display: inline;
+}
+
+#page-title {
+    color: var(--coconut-white);
+    margin: 2rem 0 2rem 4rem;
 }
 
 main {
+    background-color: var(--coconut-white);
     width: 70%;
-    margin: 0 auto;
+    margin: 130px auto;
+}
+
+section {
+    margin: 1.5rem auto;
+}
+
+.sub-group {
+    background-color: #FFF;
+    border: 2px solid var(--dark-steel-blue);
+    margin-top: 2rem;
+    padding: 2rem;
 }
 
 footer {
+    background-color: steelblue;
     width: 100%;
+    height: 100px;
+    text-align: center;
+    color: var(--coconut-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 3. Typography Styles 
 ================================ */
 h1, h2, h3 {
-    text-align: center;
+    color: var(--dark-steel-blue);
+    font-weight: bold;
 }
 
 h1 {
     font-size: var(--text-title);
+    margin: 1.5rem 0;
 }
 
 h2 {
     font-size: var(--text-subtitle);
+    margin: 1rem 0;
 }
 
 h3 {
     font-size: var(--text-heading);
+    margin: 1rem 0;
 }
 
 p {
@@ -103,25 +150,34 @@ p {
 
 /* Site Navigation */
 nav ul {
-    display: inline-block;
     list-style: none;
+    float: right;
+    margin-right: 2rem;
+}
+
+nav ul li {
+    display: inline;
 }
 
 /* Colors */
-.color-group {
-    border: 2px solid #606060;
+.color-block-group {
     display: flex;
-    align-items: space-around;
+    align-items: center;
     justify-content: space-around;
-    margin-top: 2rem;
+    margin: 1rem auto;
 }
 
 .color-block {
     width: 25vh;
     height: 25vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.color-name, .color-code {
+    color: black;
 }
 
 /* Fonts */
@@ -134,7 +190,26 @@ nav ul {
 
 /* 5. Component Styles 
 ================================ */
+/* Navigation Buttons */
+.button-nav {
+    color: var(--dark-steel-blue);
+    background-color: var(--coconut-white);
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 2px solid var(--dark-steel-blue);
+}
 
+a {
+    text-decoration: none;
+    font-size: var(--text-normal);
+    font-weight: bold;
+}
+
+a:hover {
+    box-shadow: inset 0.5em 0.5em 20px var(--dark-steel-blue);
+}
+
+/* Color Blocks */
 .neon-pink {
     background-color: #FF6EC7;
 }
@@ -165,4 +240,8 @@ nav ul {
 
 .very-dark-gray {
     background-color: #333333;
+}
+
+.dark-bkg {
+    color: #FFFFFF;
 }
