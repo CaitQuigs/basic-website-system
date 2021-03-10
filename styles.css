@@ -1,27 +1,3 @@
-/* Fonts */
-/* font-family: 'Montserrat', sans-serif; */
-/* Extra-light 200, Light 300, Regular 400, Medium 500, Semi-bold 600, Bold 700, Extra-bold 800 */
-
-/* font-family: 'Quicksand', sans-serif */
-/* Light 300, Regular 400, Medium 500, Semi-bold 600, Bold 700 */
-
-/* font-family: 'Old Standard TT', serif; */
-/* Regular 400, Regular 400 italic, Bold 700 */
-
-/* font-family: 'Vollkorn', serif; */
-/* Regular 400, Regular 400 italic, Bold 700 */
-
-/* font-family: 'Quattrocento', serif; */
-/* Regular 400, Bold 700 */
-
-/* serifs to look at: noto, ovo regular */
-
-/* permanent marker
-
-/* Playfair display black & source sans regular look good together
-
-/* cardo regular & libre franklin regular look good together */
-
 /* Site Style Sheet
     1. Global Styles
     2. Structure Styles
@@ -35,8 +11,6 @@
 ================================ */
 * {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
 }
 
 :root {
@@ -47,6 +21,8 @@
     --text-title: 3rem;
     --coconut-white: #E9EDF6;
     --dark-steel-blue: #294056;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 html {
@@ -190,7 +166,28 @@ nav ul li {
 }
 
 /* Fonts */
+.font-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.font-block {
+    border: 2px solid var(--dark-steel-blue);
+    width: 30vh;
+    height: 30vh;
+    margin: auto;
+    padding: 1rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
 
 /* Text Styles */
 .text-style-list {
@@ -199,6 +196,15 @@ nav ul li {
 }
 
 /* Buttons */
+
+/* Shapes */
+.shape-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
 
 /* 5. Component Styles 
 ================================ */
@@ -286,6 +292,31 @@ a:hover {
     background-color: #D36480;
 }
 
+/* Font Styles */
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.quattrocento {
+    font-family: 'Quattrocento', serif;
+}
+
+.old-standard {
+    font-family: 'Old Standard TT', serif;
+}
+
+.vollkorn {
+    font-family: 'Vollkorn', serif;
+}
+
 /* Text Styles */
 .article-text {
     font-size: 1rem;
@@ -303,4 +334,184 @@ a:hover {
     font-size: 1.25rem;
     font-style: italic;
     font-weight: 500;
+}
+
+/* Shapes */
+.shape-name {
+    text-align: center;
+}
+
+.circle {
+    background-color: steelblue;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.oval {
+    background-color: steelblue;
+    height: 100px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.rounded-square {
+    background-color: steelblue;
+    height: 100px;
+    width: 100px;
+    border-radius: 20%;
+}
+
+.square {
+    background-color: steelblue;
+    height: 100px;
+    width: 100px;
+}
+
+.rectangle {
+    background-color: steelblue;
+    height: 100px;
+    width: 200px;
+}
+
+.trapezoid {
+    border-bottom: 100px solid steelblue;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 200px;
+}
+
+.parallelogram {
+    background-color: steelblue;
+    width: 150px;
+    height: 100px;
+    transform: skew(25deg);
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid steelblue;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid steelblue;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid steelblue;
+    border-bottom: 50px solid transparent;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid steelblue;
+    border-bottom: 50px solid transparent;
+}
+
+.triangle-top-left {
+    width: 0;
+    height: 0;
+    border-top: 100px solid steelblue;
+    border-right: 100px solid transparent;
+}
+
+.triangle-top-right {
+    width: 0;
+    height: 0;
+    border-top: 100px solid steelblue;
+    border-left: 100px solid transparent;
+}
+
+.triangle-bottom-left {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid steelblue;
+    border-right: 100px solid transparent;
+}
+
+.triangle-bottom-right {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid steelblue;
+    border-left: 100px solid transparent;
+}
+
+.star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: steelblue;
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid steelblue;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+
+.star-five:before {
+    border-bottom: 80px solid steelblue;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: "";
+    transform: rotate(-35deg);
+}
+
+.star-five:after {
+    position: absolute;
+    display: block;
+    color: steelblue;
+    top: 3px;
+    left: -105px;
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid steelblue;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: "";
+}
+
+.heart {
+    position: relative;
+    width: 200px;
+    height: 180px;
+}
+
+.heart:before, .heart:after {
+    position: absolute;
+    content: "";
+    left: 100px;
+    top: 0;
+    width: 100px;
+    height: 160px;
+    background: steelblue;
+    border-radius: 100px 100px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
